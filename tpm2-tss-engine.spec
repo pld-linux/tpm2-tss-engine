@@ -1,13 +1,13 @@
 Summary:	TPM2 TSS engine for OpenSSL
 Summary(pl.UTF-8):	Silnik TPM2 TSS dla OpenSSL-a
 Name:		tpm2-tss-engine
-Version:	1.1.0
+Version:	1.2.0
 Release:	1
 License:	BSD
 Group:		Libraries
 #Source0Download: https://github.com/tpm2-software/tpm2-tss-engine/releases
-Source0:	https://github.com/tpm2-software/tpm2-tss-engine/releases/download/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	03d8df4ecdfcdc36fa3f668348f69115
+Source0:	https://github.com/tpm2-software/tpm2-tss-engine/releases/download/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	d66cb44c77ed537beaab53e5b72cf273
 URL:		https://github.com/tpm2-software/tpm2-tss-engine
 # for tests
 #BuildRequires:	cmocka-devel >= 1.0
@@ -17,7 +17,7 @@ BuildRequires:	pandoc
 BuildRequires:	pkgconfig >= 1:0.25
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.673
-BuildRequires:	tpm2-tss-devel >= 2.3
+BuildRequires:	tpm2-tss-devel >= 2.4
 Requires:	openssl-engine-tpm2-tss = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,7 +44,7 @@ Summary:	Bash completion for tpm2tss-genkey program
 Summary(pl.UTF-8):	Bashowe dopełnianie argumentów programu tpm2tss-genkey
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
-Requires:	bash-completion >= 2.0
+Requires:	bash-completion >= 1:2.0
 BuildArch:	noarch
 
 %description -n bash-completion-tpm2-tss-engine
